@@ -1,0 +1,61 @@
+Rubric Link: https://docs.google.com/spreadsheets/d/1EX640v4ITjjGNrA8rQWsKe3gB10_0crEXXoJDo9c59I/edit#gid=1227063358
+Title:
+
+How much do you know about your child's bootcamp? 
+
+/s 
+
+Yikes! Has your child signed up for a "coding bootcamp"? Have no fear, the internet is here! 
+
+If your child is now in Thinkful's Engineering Immersion program, this brief quiz will check your knowledge on just what your child has gotten into and what they are learning. You may even learn a thing or two about it yourself! 
+
+Start the Quiz
+
+Disclaimer: This quiz was made by a Thinkful student to fulfill a quiz app project requirement. While the statistics used in the quiz are true, this in no way reflects the views or opinions of Thinkful staff, students, or Thinkful as a whole. Apart from fulfilling course requirements, the developer (me) intended to use it to show off to her parents in a cheeky way and help them understand more of what she's doing. :)  
+
+1. What is my child doing? 
+  A. Playing games on the computer
+  B. Delaying adulthood
+  C. Learning how to use the Google
+  >> Learning part time  
+  D. <working hard> for <this goal> 
+  Answer if correct: 
+  Answer if incorrect: 
+  Fact to display either way: Growth of development as a career field
+
+2. Is this profitable? 
+  A. Absolutely no.
+  B. Depends. If profitability is my kid being on the computer all day then yes.
+  C. This bootcamp was expensive. I sure hope it is.
+  D. Absolutely yes.
+  Answer if correct: Hooray! Correct answer: <correct answer> <next question>
+  Answer if incorrect: 
+  Fact to display either way: The <a href="https://www.thinkful.com/outcomes/">average salary</a> increase reported by Thinkful grads is $19,613!
+
+3. What if it's not best for my child (and they decide to pursue something else)? 
+  A. My child will continue to delay adulthood. 
+  B. My child will pursue their dream in becoming a cowboy/cowgirl astronaut racecar driver.
+  C. My child will switch to being an Uber driver. 
+  D. <Something about Thinkful offering a refund> 
+Fact: something about the refund and prep course if they try decide not to do it 
+
+4. Will my child get a job afterward? 
+  A. Yes, but not as a web/software developer.
+  B. No
+  C. Yes, Thinkful guarantees that qualifying graduates get a job in their field six months after graduating. 
+  D. What is a job? 
+Thinkful will extend its career services assistance by request.
+Fact: If you don't get a job within that time, they will <a href="https://tf-assets-prod.s3.amazonaws.com/shoebill/PDFs/thinkful-job-guarantee.pdf">refund the cost of tuition</a>.
+
+5. Complete this for loop by filling in the blank so that it prints the message three times: 
+for ________________ {
+	console.log('I love you parents!')
+}
+
+  A. What the heck is a for loop?
+  B. For me? 
+  C. For ever
+  D. (let i = 0, i <= 3, i++)
+Fact: A "for loop" is used to tell the code how many times to repeat itself! 
+
+-----------------------------------------
