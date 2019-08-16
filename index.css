@@ -23,7 +23,8 @@ header {
   margin-right:auto; 
   width:400px; 
   height: 450px;
-  background-color: grey;
+  background-color: black;
+  border: 20px solid white;
 }
 
 .js-quiz-box h1 {

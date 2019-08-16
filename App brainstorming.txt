@@ -49,7 +49,7 @@ Fact: If you don't get a job within that time, they will <a href="https://tf-ass
 
 5. Complete this for loop by filling in the blank so that it prints the message three times: 
 for ________________ {
-	console.log('I love you parents!')
+	console.log('I love you parents!')c
 }
 
   A. What the heck is a for loop?
