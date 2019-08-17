@@ -51,9 +51,18 @@ header {
   align-items: flex-start;
 }
 
+.score {
+  margin-right: 15px;
+}
+
+.questionNum {
+  margin-left: 15px; 
+}
+
 h1 {
   padding: 10px;
 }
+
 .submitButton {
   width: 150px;
   height: 40px;
