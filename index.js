@@ -84,7 +84,7 @@ function renderEndPage() {
 }
 
 function createQuiz () {
-  renderEndPage();
+  renderQuestion();
 }
 
 $(createQuiz);
