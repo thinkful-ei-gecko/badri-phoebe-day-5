@@ -124,7 +124,7 @@ $('.js-quiz-box').on('submit', 'form', event=>{
 //Restart quiz button (refresh question number, score, userInput and run createQuiz())
 $('.js-quiz-box').on('click', '.restart', event => {
   $('.js-quiz-box').empty();
-  questionNumber = 1;
+  questionNumber = 0;
   score = 0;
   userInput = '';
   renderStartPage();
