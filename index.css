@@ -25,6 +25,11 @@ header {
   height: 450px;
   background-color: black;
   border: 20px solid white;
+  text-align: center;
+}
+
+.disclaimer {
+  font-size: 8px;
 }
 
 .js-quiz-box h1 {
@@ -63,11 +68,27 @@ h1 {
   padding: 10px;
 }
 
-.submitButton {
+button {
+  background-color:rgb(7, 12, 7);
+  display: inline-block;
   width: 150px;
-  height: 40px;
+  height: 55px;
+  padding: 15px;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  color: white;
+  font: inherit;
+  font-size: 111%;
+  transition-property: color, background;
+  transition-duration: 0.35s;
+  transition-timing-function: ease-in-out;
+  box-shadow: -2px -2px rgb(255, 255, 255);
+  border: 3px sold white;
 }
 
+button:hover {
+  background-color:rgb(255, 255, 255);
+}
 /* @media screen and (min-width: 420px) {
   main {
     padding: 10px 50px 10px 50px;

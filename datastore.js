@@ -1,7 +1,9 @@
+'use strict';
+
 const STORE = [
   {
     question: 'What is my child doing?',
-    answers: ['Playing games on the computer', 'Delaying adulthood', 'Learning how to use the Google', 'Learning part time', 'Spending 40-60 hours weekly in an intensive program to become a junior developer in five months!'],
+    answers: ['Delaying adulthood', 'Learning how to use the Google', 'Learning part time', 'Spending 40-60 hours weekly in an intensive program to become a junior developer in five months!'],
     correctAnswer: 'Spending 40-60 hours weekly in an intensive program to become a junior developer in five months!',
     fact: 'Growth of development as a career field'
   },
@@ -32,4 +34,4 @@ const STORE = [
     correctAnswer: '(let i = 0, i <= 3, i++)',
     fact: 'A "for loop" is used to tell the code how many times to repeat itself!' 
   }
-]
+];
