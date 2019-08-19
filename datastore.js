@@ -27,11 +27,11 @@ const STORE = [
   },
   {
     question: `Complete this for loop by filling in the blank so that it prints the message three times: 
-    for ________________ {
-      console.log('I love you parents!')
+    <code>for ________________ {
+      console.log('I love you parents!</code>')
     }`,
-    answers: ['What the heck is a for loop?','For me?', 'For ever', '(let i = 0, i <= 3, i++)'],
-    correctAnswer: '(let i = 0, i <= 3, i++)',
+    answers: ['What the heck is a for loop?','For me?', 'For ever', '<code>(let i = 0, i <= 3, i++)</code>'],
+    correctAnswer: '<code>(let i = 0, i <= 3, i++)</code>',
     fact: 'A "for loop" is used to tell the code how many times to repeat itself!' 
   }
 ];
