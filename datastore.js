@@ -27,6 +27,7 @@ const STORE = [
   },
   {
     question: `Complete this for loop by filling in the blank so that it prints the message three times: 
+<<<<<<< HEAD
     <style>
       p.code {font-size: 15pt}
       p.code {text-align: left}
@@ -37,6 +38,13 @@ const STORE = [
     }</code></p>`,
     answers: ['What the heck is a for loop?','For me?', 'For ever', '(let i = 0, i <= 3, i++)'],
     correctAnswer: '(let i = 0, i <= 3, i++)',
+=======
+    <code>for ________________ {
+      console.log('I love you parents!</code>')
+    }`,
+    answers: ['What the heck is a for loop?','For me?', 'For ever', '<code>(let i = 0, i <= 3, i++)</code>'],
+    correctAnswer: '<code>(let i = 0, i <= 3, i++)</code>',
+>>>>>>> 40367499973ccf7d5fbff773af83233eb2cada46
     fact: 'A "for loop" is used to tell the code how many times to repeat itself!' 
   }
 ];
