@@ -22,7 +22,7 @@ function generateQuestion (){
   if (questionNumber < STORE.length) {
     return `<div>
       <h1>${STORE[questionNumber - 1].question} </h1>
-      <form class="questionForm">
+      <form id="qForm" class="questionForm">
         <fieldset>
           <label class="answerOption">
             <input type="radio" value="Answer 1" name="answer" required>
@@ -106,7 +106,7 @@ $('.js-quiz-box').on('click', '.next-question', event => {
 });
   
 //Display result on "submit" click
-$('form').on('submit-button', event => {
+$('.questionForm').submit(function(event) {
   event.preventDefault();
   userInput = $('input:checked').val();
   $('.js-quiz-box').empty();
@@ -122,4 +122,4 @@ $('.js-quiz-box').on('click', '.restart', event => {
   renderStartPage();
 });
 
-$(renderStartPage);
+$(generateResultsView);
