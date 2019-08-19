@@ -27,8 +27,8 @@ const STORE = [
   },
   {
     question: `Complete this for loop by filling in the blank so that it prints the message three times: 
-    <code>for ________________ {
-      console.log('I love you parents!</code>')
+    <br> <code>for ________________ { <br>
+      console.log('I love you parents!</code>') <br>
     }`,
     answers: ['What the heck is a for loop?','For me?', 'For ever', '<code>(let i = 0, i <= 3, i++)</code>'],
     correctAnswer: '<code>(let i = 0, i <= 3, i++)</code>',
