@@ -24,21 +24,23 @@ function generateQuestion (){
       <h1>${STORE[questionNumber - 1].question} </h1>
       <form class="questionForm">
         <fieldset>
-          <div class="questionForm"> 
-            <input type="radio" id="Q ${questionNumber} A 1" value="Answer 1" name="answer" required>
-            <label class="answerOption" for="Q ${questionNumber} A 1">${STORE[questionNumber - 1].answers[0]}</label>
-          </div>    
-          <div class="questionForm"> 
-            <input type="radio" id="Q ${questionNumber} A 2" value="Answer 2" name="answer" required>
-            <label class="answerOption"> for="Q ${questionNumber} 2" ${STORE[questionNumber - 1].answers[1]}</label>
-          </div>
-          <div class="questionForm"> 
-            <input type="radio" id="Q ${questionNumber} A 3" value="Answer 3" name="answer" required>
-            <label class="answerOption" for="Q ${questionNumber} A 3">${STORE[questionNumber - 1].answers[2]}</label>
-          </div>    
-          <div class="questionForm"> 
-            <input type="radio" id="Q ${questionNumber} A 4" value="Answer 4" name="answer" required>
-            <label class="answerOption" for="Q ${questionNumber} A 4">${STORE[questionNumber - 1].answers[3]}</label>
+          <div class="answer-options">
+            <div class="answerOption">
+              <input type="radio" class="input" id="Q${questionNumber} A1" value="${STORE[questionNumber - 1].answers[0]}" name="answer" required>
+              <label class="answerOption" for="Q${questionNumber} A1">${STORE[questionNumber - 1].answers[0]}</label>
+            </div>    
+            <div class="answerOption">
+              <input type="radio" class="input" id="Q${questionNumber} A2" value="${STORE[questionNumber - 1].answers[1]}" name="answer" required>
+              <label class="answerOption" for="Q${questionNumber} A2">${STORE[questionNumber - 1].answers[1]}</label>
+            </div>
+            <div class="answerOption">
+              <input type="radio" class="input" id="Q${questionNumber} A3" value="${STORE[questionNumber - 1].answers[2]}" name="answer" required>
+              <label class="answerOption" for="Q${questionNumber} A3">${STORE[questionNumber - 1].answers[2]}</label>
+            </div>    
+            <div class="answerOption">
+              <input type="radio" class="input" id="Q${questionNumber} A4" value="${STORE[questionNumber - 1].answers[3]}" name="answer" required>
+              <label class="answerOption" for="Q${questionNumber} A4">${STORE[questionNumber - 1].answers[3]}</label>
+            </div>
           </div>
           <button type="submit" class="submit-button">Submit</button>
         </fieldset>
@@ -46,24 +48,6 @@ function generateQuestion (){
     </div>`
   }
 }
-
-//if we want the lines for the radios to be divided by divs use: 
-{/* <div class="questionForm"> 
-<input type="radio" id="Q ${questionNumber} A 1" value="Answer 1" name="answer" required>
-<label class="answerOption" for="Q ${questionNumber} A 1">${STORE[questionNumber - 1].answers[0]}</label>
-</div>    
-<div class="questionForm"> 
-<input type="radio" id="Q ${questionNumber} A 2" value="Answer 2" name="answer" required>
-<label class="answerOption"> for="Q ${questionNumber} 2" ${STORE[questionNumber - 1].answers[1]}</label>
-</div>
-<div class="questionForm"> 
-<input type="radio" id="Q ${questionNumber} A 3" value="Answer 3" name="answer" required>
-<label class="answerOption" for="Q ${questionNumber} A 3">${STORE[questionNumber - 1].answers[2]}</label>
-</div>    
-<div class="questionForm"> 
-<input type="radio" id="Q ${questionNumber} A 4" value="Answer 4" name="answer" required>
-<label class="answerOption" for="Q ${questionNumber} A 4">${STORE[questionNumber - 1].answers[3]}</label>
-</div> */}
 
 function renderQuestion() {
   console.log('test');
