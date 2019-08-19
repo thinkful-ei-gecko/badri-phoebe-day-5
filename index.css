@@ -45,6 +45,10 @@ header {
   margin-right:auto;
   text-align:center;
 }
+
+div .questionForm {
+  display:inline;
+}
 .answerOption {
   width: 320px;
   height: 80px;
