@@ -1,13 +1,15 @@
 'use strict';
 //js-quiz-box
 
-let questionNumber = 1;
+let questionNumber = 0;
 let score = 0;
 let userInput = '';
 
+
+
+
 //get the start page
 function renderStartPage () {
-  console.log('rendered start page');
   $('.js-quiz-box').html(`
     <h1 class = "quizTitle">How Much Do You Know About Your Child's Bootcamp?</h1>
     <p class = "quizText">Yikes! Has your child signed up for a "coding bootcamp"? Have no fear, the internet is here!</p>
@@ -15,13 +17,15 @@ function renderStartPage () {
     <button type="button" class="next-question">Start the Quiz</button>
     <p id="disclaimer">Disclaimer: This quiz was made by Thinkful students to fulfill a quiz app project requirement. While the statistics used in the quiz are true, this in no way reflects the views or opinions of Thinkful staff, students, or Thinkful as a whole. Apart from fulfilling course requirements, it was created to show off their new skills to their parents in a cheeky way and help them understand more of the course itself. :)</p>
   `);
+  $('.score').html(`Your Score: ${score}`);
+  $('.questionNumber').html(`Question: ${questionNumber}/5`);
 }
 
 // get the questions and results
 function generateQuestion (){
   if (questionNumber -1 < STORE.length) {
     return `<div>
-      <h1>${STORE[questionNumber - 1].question} </h1>
+      <h1>${STORE[questionNumber -1].question} </h1>
       <form id="qForm" class="questionForm">
         <fieldset>
           <div class="answer-options">
@@ -50,7 +54,10 @@ function generateQuestion (){
 }
 
 function renderQuestion() {
+  questionNumber++;
   $('.js-quiz-box').html(generateQuestion);
+  $('.score').html(`Your Score: ${score}`);
+  $('.questionNum').html(`Question: ${questionNumber}/5`);
 }
 
 function generateResultsView() {
@@ -60,6 +67,8 @@ function generateResultsView() {
   } else {
     renderIncorrectResultsView();
   }
+  $('.score').html(`Your Score: ${score}`);
+  $('.questionNum').html(`Question: ${questionNumber}/5`);
 }
 
 function renderCorrectResultsView() {
@@ -71,7 +80,8 @@ function renderCorrectResultsView() {
       <button type="button" class="next-question">Next</button>
     </div>
   `)
-  questionNumber++;
+  $('.score').html(`Your Score: ${score}`);
+  $('.questionNum').html(`Question: ${questionNumber}/5`);
 }
 
 function renderIncorrectResultsView() {
@@ -83,7 +93,8 @@ function renderIncorrectResultsView() {
       <button type="button" class="next-question">Next</button>
     </div>
     `)
-  questionNumber++;
+  $('.score').html(`Your Score: ${score}`);
+  $('.questionNum').html(`Question: ${questionNumber}/5`);
 }
 
 function renderEndPage() {
