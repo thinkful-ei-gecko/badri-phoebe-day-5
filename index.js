@@ -24,22 +24,24 @@ function generateQuestion (){
       <h1>${STORE[questionNumber - 1].question} </h1>
       <form id="qForm" class="questionForm">
         <fieldset>
-          <label class="answerOption">
-            <input type="radio" value="Answer 1" name="answer" required>
-            <span>${STORE[questionNumber - 1].answers[0]}</span>
-          </label>    
-          <label class="answerOption">
-            <input type="radio" value="Answer 2" name="answer" required>
-            <span>${STORE[questionNumber - 1].answers[1]}</span>
-          </label>
-          <label class="answerOption">
-            <input type="radio" value="Answer 3" name="answer" required>
-            <span>${STORE[questionNumber - 1].answers[2]}</span>
-          </label>    
-          <label class="answerOption">
-            <input type="radio" value="Answer 4" name="answer" required>
-            <span>${STORE[questionNumber - 1].answers[3]}</span>
-          </label>
+          <div class="answer-options">
+            <div class="answerOption">
+              <input type="radio" class="input" id="Q${questionNumber} A1" value="${STORE[questionNumber - 1].answers[0]}" name="answer" required>
+              <label class="answerOption" for="Q${questionNumber} A1">${STORE[questionNumber - 1].answers[0]}</label>
+            </div>    
+            <div class="answerOption">
+              <input type="radio" class="input" id="Q${questionNumber} A2" value="${STORE[questionNumber - 1].answers[1]}" name="answer" required>
+              <label class="answerOption" for="Q${questionNumber} A2">${STORE[questionNumber - 1].answers[1]}</label>
+            </div>
+            <div class="answerOption">
+              <input type="radio" class="input" id="Q${questionNumber} A3" value="${STORE[questionNumber - 1].answers[2]}" name="answer" required>
+              <label class="answerOption" for="Q${questionNumber} A3">${STORE[questionNumber - 1].answers[2]}</label>
+            </div>    
+            <div class="answerOption">
+              <input type="radio" class="input" id="Q${questionNumber} A4" value="${STORE[questionNumber - 1].answers[3]}" name="answer" required>
+              <label class="answerOption" for="Q${questionNumber} A4">${STORE[questionNumber - 1].answers[3]}</label>
+            </div>
+          </div>
           <button type="submit" class="submit-button">Submit</button>
         </fieldset>
       </form>

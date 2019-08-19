@@ -1,11 +1,11 @@
 'use strict';
-
+//when finished add facts
 const STORE = [
   {
     question: 'What is my child doing?',
     answers: ['Delaying adulthood', 'Learning how to use the Google', 'Learning part time', 'Spending 40-60 hours weekly in an intensive program to become a junior developer in five months!'],
     correctAnswer: 'Spending 40-60 hours weekly in an intensive program to become a junior developer in five months!',
-    fact: 'Growth of development as a career field'
+    fact: 'Thinkful\'s engineering immersion program is a rigorous online program that supplements a up-to-date curriculum with robust instruction and support.'
   },
   {
     question: 'Is this profitable?',
@@ -15,9 +15,9 @@ const STORE = [
   },
   {
     question: 'What if it\'s not best for my child (and they decide to pursue something else)?',
-    answers: ['My child will continue to delay adulthood.', 'My child will pursue their dream in becoming a cowboy/cowgirl astronaut racecar driver.', 'My child will switch to being an Uber driver.', '<Something about Thinkful offering a refund>'],
-    correctAnswer: 'Something about Thinkful offering a refund',
-    fact: 'something about the refund and prep course if they try decide not to do it'
+    answers: ['My child will lose all the money they paid.', 'My child will pursue their dream in becoming a cowboy/cowgirl astronaut racecar driver.', 'My child will switch to being an Uber driver.', 'My child can get a refund for the remainder of the program.'],
+    correctAnswer: 'My child can get a refund for the remainder of the program.',
+    fact: 'Depending on the student\'s payment plan and meeting qualifications, <a href="https://www.thinkful.com/course-catalog/>students can get a refund the unfinished portion of the course</a>.'
   },
   {
     question: 'Will my child get a job afterward?',
