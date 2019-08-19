@@ -63,6 +63,7 @@ function renderQuestion() {
 function generateResultsView() {
   if (userInput === STORE[questionNumber - 1].correctAnswer) {
     score++;
+    console.log(score);
     renderCorrectResultsView();
   } else {
     renderIncorrectResultsView();
