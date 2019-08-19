@@ -27,26 +27,26 @@ function generateQuestion (){
     return `<div>
       <h1>${STORE[questionNumber -1].question} </h1>
       <form id="qForm" class="questionForm">
-        <fieldset>
-          <div class="answer-options">
-            <div class="answerOption">
-              <input type="radio" class="input" id="Q${questionNumber} A1" value="${STORE[questionNumber - 1].answers[0]}" name="answer" required>
-              <label class="answerOption" for="Q${questionNumber} A1">${STORE[questionNumber - 1].answers[0]}</label>
-            </div>    
-            <div class="answerOption">
-              <input type="radio" class="input" id="Q${questionNumber} A2" value="${STORE[questionNumber - 1].answers[1]}" name="answer" required>
-              <label class="answerOption" for="Q${questionNumber} A2">${STORE[questionNumber - 1].answers[1]}</label>
-            </div>
-            <div class="answerOption">
-              <input type="radio" class="input" id="Q${questionNumber} A3" value="${STORE[questionNumber - 1].answers[2]}" name="answer" required>
-              <label class="answerOption" for="Q${questionNumber} A3">${STORE[questionNumber - 1].answers[2]}</label>
-            </div>    
-            <div class="answerOption">
-              <input type="radio" class="input" id="Q${questionNumber} A4" value="${STORE[questionNumber - 1].answers[3]}" name="answer" required>
-              <label class="answerOption" for="Q${questionNumber} A4">${STORE[questionNumber - 1].answers[3]}</label>
-            </div>
+        <fieldset class="answer-options">
+          <label class="answer-option">
+            <input type="radio" class="input" value="${STORE[questionNumber - 1].answers[0]}" name="answer" required>
+            ${STORE[questionNumber - 1].answers[0]}
+          </label>
+          <label class="answer-option">
+            <input type="radio" class="input" value="${STORE[questionNumber - 1].answers[1]}" name="answer" required>
+            ${STORE[questionNumber - 1].answers[1]}
+          </label>
+          <label class="answer-option">
+            <input type="radio" class="input" value="${STORE[questionNumber - 1].answers[2]}" name="answer" required>
+            ${STORE[questionNumber - 1].answers[2]}
+          </label>    
+          <label class="answer-option">
+            <input type="radio" class="input" value="${STORE[questionNumber - 1].answers[3]}" name="answer" required>
+            ${STORE[questionNumber - 1].answers[3]}
+          </label>
+          <div class="submit">
+            <button type="submit" class="submit-button">Submit</button>
           </div>
-          <button type="submit" class="submit-button">Submit</button>
         </fieldset>
       </form>
     </div>`

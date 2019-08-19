@@ -11,13 +11,9 @@ body {
 }
 
 header {
-  /* text-align: center;
-  vertical-align: text-bottom;  */
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  /* pbtag */
-  /* height: 100px; */
   height:50px;
 }
 
@@ -26,18 +22,11 @@ p {
 }
 
 .js-quiz-box {
-  /* pbtag */
-  /* margin-left:100px; 
-  margin-right:100px;  */
-  margin: 0 25px 0 25px;
-  /* pbtag */
-  /* padding: 25px; */
-  padding; 20px;
+  margin: 0 25px 25px 25px;
+  padding: 20px 20px 0 20px;
   width: inherit; 
   height: inherit;
   background-color: black;
-  /* pbtag */
-  /* border: 10px solid white; */
   border: 5px solid white;
   text-align: center;
   display:block;
@@ -45,46 +34,54 @@ p {
 
 #disclaimer {
   font-size: 8px;
-  /* pbtag */
-  /* margin-top:50px; */
   margin: 10px 0 0 0;
 }
 
-/* Per the ordering, allow header, button, and non-question text to be centered. */
-.js-quiz-box {
-  text-align: center;
-}
-
-.questionForm fieldset{
+/* Per the ordering, allow headers, button, and, question labels (but not text) non-question text to be centered. */
+.answer-options{
   border: 0;
   margin: 0;
-  padding: 10px;
+  height: inherit;
   width: inherit;
   margin-left:auto;
   margin-right:auto;
-} 
-
-fieldset .answer-options {
-  text-align: left;
-  width: inherit;
-  height: inherit;
-}
-
-div.answerOption {
-  width: inherit;
-  height: inherit;
   display: flex; 
   flex-direction: row; 
-  justify-content: flex-start;   
+  justify-content: center;   
   align-items: center;
-  padding-bottom: 20px;
+}
+
+.answer-option {
+  outline: 2px solid white;
+  width: inherit;
+  height: inherit;
+  padding: 10px;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
+
+.answer-option:hover {
+  background:white;
+  color: black;
+  transition-property: color, background;
+  transition-duration: 0.35s;
+}
+
+.answer-option:checked {
+  background: white;
+  color: black;
 }
 
 /*Allows the radio buttons and the label text to display on one line. 
   Adds space between the radio buttons and the option text.*/
-.input, label.answerOption {
+input, label.answer-option {
   display:inline;
-  padding: 0 0 0 10px;
+}
+
+/* Hides the radio button without affecting accessibility */
+input[type="radio"]{
+  position: fixed;
+  opacity: 0;
 }
 
 .score {
@@ -122,12 +119,37 @@ button {
 button:hover {
   transform: translate(-2px,-2px);
 }
-/* @media screen and (min-width: 420px) {
-  main {
-    padding: 10px 50px 10px 50px;
+
+@media screen and (min-width: 420px) {
+  .js-quiz-box {
+    margin-left:100px; 
+    margin-right:100px; 
+    padding: 25px;
+    border: 10px solid white;
   }
 }
 
 @media screen and (min-width: 1050px) {
+  header {
+    height: 100px;
+  }
 
-}*/
+  main {
+    padding: 10px 50px 10px 50px;
+  }
+
+  .js-quiz-box {
+    margin-left:350px; 
+    margin-right:350px; 
+    padding: 35px;
+    border: 10px solid white;
+  }
+
+  div.answer-option {
+    padding: 20px;
+  }
+
+  #disclaimer {
+    margin-top:20px;
+  }
+}
