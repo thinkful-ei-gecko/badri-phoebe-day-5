@@ -124,7 +124,7 @@ $('.js-quiz-box').on('click', '.next-question', event => {
 });
   
 //Display result on "submit" click
-$('form').on('submit', event => {
+$('form').on('submit-button', event => {
   event.preventDefault();
   userInput = $('input:checked').val();
   $('.js-quiz-box').empty();

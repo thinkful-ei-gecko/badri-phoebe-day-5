@@ -20,17 +20,20 @@ header {
 }
 
 .js-quiz-box {
-  margin-left:auto; 
-  margin-right:auto; 
-  width:400px; 
-  height: 450px;
+  margin-left:100px; 
+  margin-right:100px; 
+  width: inherit; 
+  height: inherit;
   background-color: black;
-  border: 20px solid white;
+  border: 10px solid white;
   text-align: center;
+  display:block;
+  padding: 25px;
 }
 
-.disclaimer {
+#disclaimer {
   font-size: 8px;
+  margin-top:50px;
 }
 
 .js-quiz-box h1 {
@@ -39,8 +42,8 @@ header {
 .questionForm fieldset{
   border: 0;
   margin: 0;
-  padding: 0;
-  width:320px;
+  padding: 10px;
+  width: inherit;
   margin-left:auto;
   margin-right:auto;
   text-align:center;
@@ -50,15 +53,13 @@ div .questionForm {
   display:inline;
 }
 .answerOption {
-  width: 320px;
-  height: 80px;
-  /*display: block;
-  text-align: left;
-  justify-content: space-evenly;*/
+  width: inherit;
+  height: inherit;
+  padding: 20px;
   display: flex; 
-  flex-direction: column; 
-  justify-content: space-evenly; 
-  align-items: flex-start;
+  flex-direction: row; 
+  justify-content: flex-start; 
+  
 }
 
 .score {
@@ -74,7 +75,7 @@ h1 {
 }
 
 button {
-  background-color:rgb(7, 12, 7);
+  background-color: black;
   display: inline-block;
   width: 150px;
   height: 55px;
@@ -87,12 +88,12 @@ button {
   transition-property: color, background;
   transition-duration: 0.35s;
   transition-timing-function: ease-in-out;
-  box-shadow: -2px -2px rgb(255, 255, 255);
-  border: 3px sold white;
+  box-shadow: 3px 3px rgb(255, 255, 255);
+  border: 10px sold white;
 }
 
 button:hover {
-  background-color:rgb(255, 255, 255);
+  transform: translate(-2px,-2px);
 }
 /* @media screen and (min-width: 420px) {
   main {
