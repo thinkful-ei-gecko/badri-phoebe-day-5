@@ -5,9 +5,6 @@ let questionNumber = 0;
 let score = 0;
 let userInput = '';
 
-
-
-
 //get the start page
 function renderStartPage () {
   $('.js-quiz-box').html(`
@@ -28,22 +25,18 @@ function generateQuestion (){
       <h1>${STORE[questionNumber -1].question} </h1>
       <form id="qForm" class="questionForm">
         <fieldset class="answer-options">
-          <label class="answer-option">
-            <input type="radio" class="input" value="${STORE[questionNumber - 1].answers[0]}" name="answer" required>
-            ${STORE[questionNumber - 1].answers[0]}
-          </label>
-          <label class="answer-option">
-            <input type="radio" class="input" value="${STORE[questionNumber - 1].answers[1]}" name="answer" required>
-            ${STORE[questionNumber - 1].answers[1]}
-          </label>
-          <label class="answer-option">
-            <input type="radio" class="input" value="${STORE[questionNumber - 1].answers[2]}" name="answer" required>
-            ${STORE[questionNumber - 1].answers[2]}
-          </label>    
-          <label class="answer-option">
-            <input type="radio" class="input" value="${STORE[questionNumber - 1].answers[3]}" name="answer" required>
-            ${STORE[questionNumber - 1].answers[3]}
-          </label>
+          <input type="radio" id="radio-1" class="input" name="quiz" name="quiz" value="${STORE[questionNumber - 1].answers[0]}" required>  
+          <label class="answer-option" for="radio-1">${STORE[questionNumber - 1].answers[0]}</label>
+          
+          <input type="radio" id="radio-2" class="input" name="quiz" value="${STORE[questionNumber - 1].answers[1]}" required>
+          <label class="answer-option" for="radio-2">${STORE[questionNumber - 1].answers[1]}</label>
+
+          <input type="radio" id="radio-3" class="input" name="quiz" value="${STORE[questionNumber - 1].answers[2]}" required>
+          <label class="answer-option" for="radio-3">${STORE[questionNumber - 1].answers[2]}</label>    
+
+          <input type="radio" id="radio-4" class="input" name="quiz" value="${STORE[questionNumber - 1].answers[3]}" required>
+          <label class="answer-option" for="radio-4">${STORE[questionNumber - 1].answers[3]}</label>
+
           <div class="submit">
             <button type="submit" class="submit-button">Submit</button>
           </div>
@@ -54,7 +47,6 @@ function generateQuestion (){
 }
 
 function renderQuestion() {
-  questionNumber++;
   $('.js-quiz-box').html(generateQuestion);
   $('.score').html(`Your Score: ${score}`);
   $('.questionNum').html(`Question: ${questionNumber}/5`);
@@ -63,7 +55,6 @@ function renderQuestion() {
 function generateResultsView() {
   if (userInput === STORE[questionNumber - 1].correctAnswer) {
     score++;
-    console.log(score);
     renderCorrectResultsView();
   } else {
     renderIncorrectResultsView();
@@ -77,7 +68,7 @@ function renderCorrectResultsView() {
     <div>
       <h1> 🎉 Hooray!! 🎉</h1>
       <p> You got it right! Good job. 🍪</p>
-      <p> ${STORE[questionNumber - 1].fact} </p>
+      <p class="secondary-p"> ${STORE[questionNumber - 1].fact} </p>
       <button type="button" class="next-question">Next</button>
     </div>
   `)
@@ -90,7 +81,8 @@ function renderIncorrectResultsView() {
     <div> 
       <h1> 😭😭😭 </h1>
         <p> Sorry! That wasn't quite right... </p>
-        <p> The correct answer is: ${STORE[questionNumber - 1].correctAnswer} </p>
+        <p> The correct answer is:</p> 
+        <p class="secondary-p">${STORE[questionNumber - 1].correctAnswer}</p>
       <button type="button" class="next-question">Next</button>
     </div>
     `)
@@ -102,7 +94,8 @@ function renderEndPage() {
   $('.js-quiz-box').html(`
   <div> 
     <h1> Not bad... </h1>
-      <p> Final Score: ${score}/${STORE.length} </p>
+    <p>Thanks for playing!</p>
+    <p class="secondary-p"> Final Score: ${score}/${STORE.length} </p>
     <button type="button" class="restart">Try Again?</button> 
   </div>
   `)
@@ -111,7 +104,9 @@ function renderEndPage() {
 //Display next question on "next question clicked"
 $('.js-quiz-box').on('click', '.next-question', event => {
   $('.js-quiz-box').empty();
-  if (questionNumber === 6) {
+  questionNumber++;
+  if (questionNumber > 5) {
+    console.log('renderEndPage() should run');
     renderEndPage();
   } else {
     renderQuestion();

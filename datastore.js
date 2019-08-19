@@ -23,28 +23,16 @@ const STORE = [
     question: 'Will my child get a job afterward?',
     answers: ['Yes, but not as a web/software developer.', 'No', 'Yes, Thinkful guarantees that qualifying graduates get a job in their field six months after graduating.', 'What is a job?'],
     correctAnswer: 'Yes, Thinkful guarantees that qualifying graduates get a job in their field six months after graduating.',
-    fact: `If you don't get a job within that time, they will <a href="https://tf-assets-prod.s3.amazonaws.com/shoebill/PDFs/thinkful-job-guarantee.pdf">refund the cost of tuition</a>.`
+    fact: `If you don't get a job within six months after graduation, Thinkful will <a href="https://tf-assets-prod.s3.amazonaws.com/shoebill/PDFs/thinkful-job-guarantee.pdf">refund the cost of tuition</a>.`
   },
   {
     question: `Complete this for loop by filling in the blank so that it prints the message three times: 
-<<<<<<< HEAD
-    <style>
-      p.code {font-size: 15pt}
-      p.code {text-align: left}
-    </style>
     <p class="code">
-    <code>for ________________ {<br>
-    &nbsp; console.log('I love you parents!');<br>
-    }</code></p>`,
+    <code> &nbsp; for ________________ {<br>
+      &nbsp; &nbsp; console.log('I love you parents!');<br>
+      &nbsp; }</code></p>`,
     answers: ['What the heck is a for loop?','For me?', 'For ever', '(let i = 0, i <= 3, i++)'],
     correctAnswer: '(let i = 0, i <= 3, i++)',
-=======
-    <code>for ________________ {
-      console.log('I love you parents!</code>')
-    }`,
-    answers: ['What the heck is a for loop?','For me?', 'For ever', '<code>(let i = 0, i <= 3, i++)</code>'],
-    correctAnswer: '<code>(let i = 0, i <= 3, i++)</code>',
->>>>>>> 40367499973ccf7d5fbff773af83233eb2cada46
-    fact: 'A "for loop" is used to tell the code how many times to repeat itself!' 
+    fact: 'A "for loop" is used to tell the code how many times to repeat itself! This for loop would have printed: <br><code>\'I love you parents!\'\'I love you parents!\'\'I love you parents!\'</code> :)'
   }
 ];
