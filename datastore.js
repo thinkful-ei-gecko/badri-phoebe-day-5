@@ -17,8 +17,8 @@ const STORE = [
     question: 'What if it\'s not best for my child (and they decide to pursue something else)?',
     answers: ['My child will lose all the money they paid.', 'My child will pursue their dream in becoming a cowboy/cowgirl astronaut racecar driver.', 'My child will switch to being an Uber driver.', 'My child can get a refund for the remainder of the program.'],
     correctAnswer: 'My child can get a refund for the remainder of the program.',
-    fact: 'Depending on the student\'s payment plan and meeting qualifications, <a href="https://www.thinkful.com/course-catalog/>students can get a refund the unfinished portion of the course</a>.'
-  },
+    fact: `Depending on the student\'s payment plan and meeting qualifications, students can get a refund the unfinished portion of the course.`
+  }, //<a href="https://www.thinkful.com/course-catalog/> << this breaks the 'Next' button for some reason... 
   {
     question: 'Will my child get a job afterward?',
     answers: ['Yes, but not as a web/software developer.', 'No', 'Yes, Thinkful guarantees that qualifying graduates get a job in their field six months after graduating.', 'What is a job?'],

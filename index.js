@@ -19,7 +19,7 @@ function renderStartPage () {
 
 // get the questions and results
 function generateQuestion (){
-  if (questionNumber < STORE.length) {
+  if (questionNumber -1 < STORE.length) {
     return `<div>
       <h1>${STORE[questionNumber - 1].question} </h1>
       <form id="qForm" class="questionForm">
@@ -50,7 +50,6 @@ function generateQuestion (){
 }
 
 function renderQuestion() {
-  console.log('test');
   $('.js-quiz-box').html(generateQuestion);
 }
 
@@ -100,7 +99,7 @@ function renderEndPage() {
 //Display next question on "next question clicked"
 $('.js-quiz-box').on('click', '.next-question', event => {
   $('.js-quiz-box').empty();
-  if (questionNumber === 5) {
+  if (questionNumber === 6) {
     renderEndPage();
   } else {
     renderQuestion();
@@ -108,7 +107,7 @@ $('.js-quiz-box').on('click', '.next-question', event => {
 });
   
 //Display result on "submit" click
-$('.questionForm').submit(function(event) {
+$('.js-quiz-box').on('submit', 'form', event=>{
   event.preventDefault();
   userInput = $('input:checked').val();
   $('.js-quiz-box').empty();
@@ -124,4 +123,4 @@ $('.js-quiz-box').on('click', '.restart', event => {
   renderStartPage();
 });
 
-$(generateResultsView);
+$(renderStartPage);
