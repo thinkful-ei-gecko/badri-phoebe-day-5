@@ -14,8 +14,9 @@ function renderStartPage () {
     <button type="button" class="next-question">Start the Quiz</button>
     <p id="disclaimer">Disclaimer: This quiz was made by Thinkful students to fulfill a quiz app project requirement. While the statistics used in the quiz are true, this in no way reflects the views or opinions of Thinkful staff, students, or Thinkful as a whole. Apart from fulfilling course requirements, it was created to show off their new skills to their parents in a cheeky way and help them understand more of the course itself. :)</p>
   `);
+  console.log(questionNumber);
   $('.score').html(`Your Score: ${score}`);
-  $('.questionNumber').html(`Question: ${questionNumber}/5`);
+  $('.questionNum').html(`Question: ${questionNumber}/5`);
 }
 
 // get the questions and results
@@ -106,7 +107,6 @@ $('.js-quiz-box').on('click', '.next-question', event => {
   $('.js-quiz-box').empty();
   questionNumber++;
   if (questionNumber > 5) {
-    console.log('renderEndPage() should run');
     renderEndPage();
   } else {
     renderQuestion();
@@ -127,6 +127,8 @@ $('.js-quiz-box').on('click', '.restart', event => {
   questionNumber = 0;
   score = 0;
   userInput = '';
+  $('.score').html(`Your Score: ${score}`);
+  $('.questionNum').html(`Question: ${questionNumber}/5`);
   renderStartPage();
 });
 
