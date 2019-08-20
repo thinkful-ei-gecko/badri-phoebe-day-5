@@ -13,9 +13,6 @@ body {
 
 .status-container {
   display: flex;
-}
-
-header {
   justify-content: center;
   align-items: center;
   height:50px;
@@ -37,7 +34,8 @@ p {
 }
 
 #disclaimer {
-  font-size: 8px;
+  font-size: 14px;
+  font-style: italic;
   margin: 0;
 }
 
@@ -98,9 +96,9 @@ input[type="radio"]{
   margin-left: 15px; 
 }
 
-h1 {
+.page-title {
   padding: 10px;
-  margin: 10px 0 10px 0;
+  margin: 0px;
 }
 
 button {
@@ -123,7 +121,7 @@ button {
 }
 
 button:hover {
-  transform: translate(-2px,-2px);
+  transform: translate(-2px,-2px); 
 }
 
 :focus {
@@ -152,11 +150,15 @@ a {
 }
 
 @media screen and (min-width: 400px) {
-  header {
+  .status-container {
     align-items: flex-end;
     background-color:  hsla(0, 0%, 0%, 0);
   }
   
+  .page-title {
+    margin: 10px 0 10px 0;
+  }
+
   .js-quiz-box {
     padding: 20px 20px 0 20px;
     margin: 0 25px 25px 25px;
@@ -172,7 +174,7 @@ a {
 }
 
 @media screen and (min-width: 580px) {
-  header {
+  .status-container {
     text-align: flex-end;
   }
   .js-quiz-box {
@@ -194,7 +196,7 @@ a {
 }
 
 @media screen and (min-width: 1250px) {
-  header {
+  .status-container {
     height: 100px;
   }
 

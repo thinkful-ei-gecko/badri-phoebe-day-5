@@ -8,7 +8,7 @@ let userInput = '';
 //get the start page
 function renderStartPage () {
   $('.js-quiz-box').html(`
-    <h1 class = "quizTitle">How Much Do You Know About Your Child's Bootcamp?</h1>
+    <h1 class="page-title" class = "quizTitle">How Much Do You Know About Your Child's Bootcamp?</h1>
     <p class = "quizText">Yikes! Has your child signed up for a "coding bootcamp"? Have no fear, the internet is here!</p>
     <p class = "quizText">If your child is now in Thinkful's Engineering Immersion program, this brief quiz will check your knowledge on just what your child has gotten into and what they are learning. You may even learn a thing or two about it yourself!</p>
     <button type="button" class="next-question">Start the Quiz</button>
@@ -23,7 +23,7 @@ function renderStartPage () {
 function generateQuestion (){
   if (questionNumber -1 < STORE.length) {
     return `<div>
-      <h1>${STORE[questionNumber -1].question} </h1>
+      <h1 class="page-title">${STORE[questionNumber -1].question} </h1>
       <form id="qForm" class="questionForm">
         <fieldset class="answer-options">
           <input type="radio" id="radio-1" class="input" name="quiz" name="quiz" value="${STORE[questionNumber - 1].answers[0]}" required>  
@@ -67,7 +67,7 @@ function generateResultsView() {
 function renderCorrectResultsView() {
   $('.js-quiz-box').html(`
     <div>
-      <h1> 🎉 Hooray!! 🎉</h1>
+      <h1 class="page-title"> 🎉 Hooray!! 🎉</h1>
       <p> You got it right! Good job. 🍪</p>
       <p class="secondary-p"> ${STORE[questionNumber - 1].fact} </p>
       <button type="button" class="next-question">Next</button>
@@ -80,7 +80,7 @@ function renderCorrectResultsView() {
 function renderIncorrectResultsView() {
   $('.js-quiz-box').html(`
     <div> 
-      <h1> 😭😭😭 </h1>
+      <h1 class="page-title"> 😭😭😭 </h1>
         <p> Sorry! That wasn't quite right... </p>
         <p> The correct answer is:</p> 
         <p class="secondary-p">${STORE[questionNumber - 1].correctAnswer}</p>
@@ -94,7 +94,7 @@ function renderIncorrectResultsView() {
 function renderEndPage() {
   $('.js-quiz-box').html(`
   <div> 
-    <h1> Not bad... </h1>
+    <h1 class="page-title"> Not bad... </h1>
     <p>Thanks for playing!</p>
     <p class="secondary-p"> Final Score: ${score}/${STORE.length} </p>
     <button type="button" class="restart">Try Again?</button> 
